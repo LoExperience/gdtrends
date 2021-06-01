@@ -1,0 +1,71 @@
+<html>
+   <head> 
+      <title>GDtrends!</title> 
+      <meta>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h1>GDtrends!</h1>
+        <canvas id="chart" width="1000px" height="400px"></canvas>
+            <script>
+            chartIt();
+
+            setInterval(function(){
+                console.log("hi!");
+
+                
+                console.log(document.getElementById('chart').y)
+
+            }, 3000)
+
+            async function chartIt(){
+                const data = await getData();
+                const y = [];
+                const ctx = document.getElementById('chart');
+                const myChart = new Chart(ctx, {
+                    data: {
+                        labels: data.xs,
+                        datasets: [{
+                                type: 'bar',
+                                label: 'Number of github repos over time',
+                                data: data.yMonth,
+                                borderWidth: 1,
+                                    },{
+                                type: 'line',
+                                label: "Cumulative",
+                                data: data.yCum,
+                                fill: true,
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)'
+                            }]                     
+                        }
+                    });
+                }
+                async function getData(){
+                const yMonth = [];
+                const yCum = [];
+                const xs = [];
+                const response = await fetch('test.json');
+                const data = await response.json();
+                const yearKeys = Object.keys(data);
+                const yearLen = yearKeys.length;
+                for (let i = 0; i < yearLen; i++){
+                    const year = yearKeys[i];
+                    const monthKey = Object.keys(data[year]);
+                    const monthLen = monthKey.length;
+                    for(let j = 0; j < monthLen; j++){
+                        const row = monthKey[j] + " " + year;
+                        xs.push(row);
+                        const col = data[year][monthKey[j]];
+                        yMonth.push(col);
+                        if (yMonth.length == 1){
+                            yCum.push(parseFloat(col))
+                        }else{
+                            yCum.push(parseFloat(col) + parseFloat(yCum[yCum.length-1]))
+                        }
+                        }
+                    }
+                    return {xs, yMonth, yCum}
+                }
+            </script>
+    </body>
+</html>
