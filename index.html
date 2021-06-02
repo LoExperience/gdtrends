@@ -21,12 +21,12 @@
                         labels: data.xs,
                         datasets: [{
                                 type: 'bar',
-                                label: 'Number of github repos over time',
+                                label: 'New Repos',
                                 data: data.yMonth,
                                 borderWidth: 1,
                                     },{
                                 type: 'line',
-                                label: "Cumulative",
+                                label: "Running Total",
                                 data: data.yCum,
                                 fill: true,
                                 backgroundColor: 'rgba(255, 99, 132, 0.2)'
@@ -35,30 +35,30 @@
                     });
                 }
                 async function getData(){
-                const yMonth = [];
-                const yCum = [];
-                const xs = [];
-                const response = await fetch('test.json');
-                const data = await response.json();
-                const yearKeys = Object.keys(data);
-                const yearLen = yearKeys.length;
-                for (let i = 0; i < yearLen; i++){
-                    const year = yearKeys[i];
-                    const monthKey = Object.keys(data[year]);
-                    const monthLen = monthKey.length;
-                    for(let j = 0; j < monthLen; j++){
-                        const row = monthKey[j] + " " + year;
-                        xs.push(row);
-                        const col = data[year][monthKey[j]];
-                        yMonth.push(col);
-                        if (yMonth.length == 1){
-                            yCum.push(parseFloat(col))
-                        }else{
-                            yCum.push(parseFloat(col) + parseFloat(yCum[yCum.length-1]))
+                    const yMonth = [];
+                    const yCum = [];
+                    const xs = [];
+                    const response = await fetch('sample.json');
+                    const data = await response.json();
+                    const yearKeys = Object.keys(data);
+                    const yearLen = yearKeys.length;
+                    for (let i = 0; i < yearLen; i++){
+                        const year = yearKeys[i];
+                        const monthKey = Object.keys(data[year]);
+                        const monthLen = monthKey.length;
+                        for(let j = 0; j < monthLen; j++){
+                            const row = monthKey[j] + " " + year;
+                            xs.push(row);
+                            const col = data[year][monthKey[j]];
+                            yMonth.push(col);
+                            if (yMonth.length == 1){
+                                yCum.push(parseFloat(col))
+                            }else{
+                                yCum.push(parseFloat(col) + parseFloat(yCum[yCum.length-1]))
+                            }
+                            }
                         }
-                        }
-                    }
-                    return {xs, yMonth, yCum}
+                        return {xs, yMonth, yCum}
                 }
             </script>
     </body>

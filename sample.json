@@ -1,4 +1,16 @@
 {
+    "2013":
+    {"January": 0, "February": 0, "March": 0, "April": 0, "May": 0, "June": 0, "July": 0, "August": 0, "September": 0, "October": 0, "November": 0, "December": 0},
+    "2014":
+    {"January": 1, "February": 1, "March": 1, "April": 0, "May": 0, "June": 0, "July": 2, "August": 0, "September": 2, "October": 4, "November": 5, "December": 12},
+    "2015":
+    {"January": 19, "February": 16, "March": 7, "April": 23, "May": 21, "June": 17, "July": 13, "August": 28, "September": 31, "October": 21, "November": 16, "December": 31},
+    "2016":
+    {"January": 40, "February": 30, "March": 38, "April": 55, "May": 39, "June": 53, "July": 30, "August": 56, "September": 59, "October": 39, "November": 60, "December": 72},
+    "2017":
+    {"January": 74, "February": 53, "March": 53, "April": 79, "May": 67, "June": 68, "July": 98, "August": 94, "September": 104, "October": 145, "November": 163, "December": 148},
+    "2018":
+    {"January": 174, "February": 231, "March": 241, "April": 287, "May": 242, "June": 245, "July": 268, "August": 287, "September": 263, "October": 280, "November": 349, "December": 299},
     "2019":
     {"January": 384, "February": 311, "March": 353, "April": 451, "May": 349, "June": 393, "July": 365, "August": 430, "September": 468, "October": 655, "November": 633, "December": 482},
     "2020":
