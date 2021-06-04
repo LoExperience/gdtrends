@@ -1,0 +1,31 @@
+body {
+    background-color: #4a5365;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: .2fr 60vw .2fr;
+    height: 100%;
+}
+
+header {
+    grid-area: 1 / 1 / 2 / 2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.chart-container {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 6;
+    height:80vh;
+    width:100vw"
+}
+
+canvas {
+    background-color: rgba(62, 142, 204, 1);
+    border-radius: 15px;
+    border-color: none;
+}
