@@ -31,6 +31,8 @@ async function chartIt(){
                 
             }
         },
+        responsive: true,
+        maintainAspectRatio: false,
         animations: {
             radius: {
                 duration: 1000,
@@ -113,14 +115,14 @@ async function chartIt(){
                                         clearInterval(updateCum)
                                     }
                                     myChart.update();
-                                }, 50
+                                }, 25
                             )
-                        }, 500
+                        }, 50
                     )
                 clearInterval(updateChart)
         }
         myChart.update();
-        }, 50);
+        }, 5);
     }
 
     function sleep(cht, data) {

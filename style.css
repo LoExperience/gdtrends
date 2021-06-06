@@ -1,27 +1,38 @@
 body {
     background-color: #4a5365;
+    margin: 0px;
+    padding: 0px;
 }
 
 article {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: .2fr 60vw .2fr;
-    height: 100%;
+    grid-template-rows: 1fr 7fr 1fr;
+    grid-gap: 0px;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
 }
 
 header {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 1;
+    grid-column-end: 4;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 .chart-container {
     grid-row-start: 2;
-    grid-column-start: 1;
+    grid-column-start: 3;
     grid-row-end: 3;
-    grid-column-end: 6;
-    height:80vh;
-    width:100vw"
+    grid-column-end: 4;
+    height: 75vh;
+    width: 75vw;
 }
 
 canvas {
