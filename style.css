@@ -17,14 +17,27 @@ article {
     margin: 0px;
 }
 
+
+
 header {
     grid-row-start: 1;
     grid-column-start: 3;
     grid-row-end: 1;
     grid-column-end: 4;
+}
+
+.godot_logo {
+    padding-top: 2vh;
+}
+
+h1 {
+    padding: 0px;
+    padding-bottom: 2vh;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+
 
 .chart-container {
     grid-row-start: 2;
