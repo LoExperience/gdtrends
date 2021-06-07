@@ -102,7 +102,6 @@ async function chartIt(){
                     myChart.options.scales.y.max = xMax
                 }
             } else{
-                // dataAnimYcum = data.yCum.slice()
                 var delayUpdate = setTimeout(
                         function(){
                             let updateCum = setInterval(
@@ -117,7 +116,7 @@ async function chartIt(){
                                     myChart.update();
                                 }, 25
                             )
-                        }, 50
+                        }, 100
                     )
                 clearInterval(updateChart)
         }
