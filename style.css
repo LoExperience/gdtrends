@@ -25,6 +25,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-items: start;
+    font-size: 2vmin;
 }
 
 .godot_logo {
@@ -39,7 +40,7 @@ header {
 
 h1 {
     padding: 0px;
-    padding-bottom: 2vh;
+    padding-bottom: 1vmin;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
