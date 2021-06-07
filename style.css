@@ -17,13 +17,14 @@ article {
     margin: 0px;
 }
 
-
-
 header {
     grid-row-start: 1;
     grid-column-start: 3;
     grid-row-end: 1;
     grid-column-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
 }
 
 .godot_logo {
@@ -33,7 +34,6 @@ header {
     width: 15vmin;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 h1 {
