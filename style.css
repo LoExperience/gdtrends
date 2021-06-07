@@ -29,9 +29,8 @@ header {
 
 .godot_logo {
     display: block;
-    padding-top: 2vh;
-    max-width:15vmax;
-    max-height: 15vmax;
+    max-width:5vmax;
+    max-height: 5vmax;
     width: auto;
     height: auto;
     margin-left: auto;
